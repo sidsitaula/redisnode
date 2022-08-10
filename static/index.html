@@ -12,7 +12,7 @@
         const pv = document.getElementById('pageViews');
         async function pageviews(){
             const res = await fetch('/pv');
-            const {views} = res.json();
+            const {views} = await res.json();
             pv.innerText=views;
         }
         pageviews();
